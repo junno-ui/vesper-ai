@@ -1,0 +1,7 @@
+.scroll-stack { margin-top: 64px; }
+.scroll-stack-item { min-width: 0; padding-bottom: 28px; }
+.scroll-stack-card { position: relative; transform-origin: top center; border-radius: 16px; }
+.scroll-stack-card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: #000; opacity: var(--stack-shade, 0); pointer-events: none; }
+.scroll-stack[data-stack-enabled="true"]::after { content: ""; display: block; height: 22svh; }
+[data-stack-enabled="true"] .scroll-stack-item { position: sticky; top: calc(var(--stack-top) + var(--stack-index) * var(--stack-step)); padding-bottom: var(--stack-gap); }
+[data-stack-enabled="true"] .scroll-stack-item:focus-within { z-index: 5; }

@@ -1,0 +1,4 @@
+.scroll-reveal-word { display: inline-block; }
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal-word { opacity: 1 !important; filter: none !important; }
+}
